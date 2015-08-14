@@ -48,15 +48,27 @@ def not_bad(s):
 # Given 2 strings, a and b, return a string of the form
 #  a-front + b-front + a-back + b-back
 def front_back(a, b):
-    print a
-    print b
+    #print a
+    #print b
+    moduleLenA = len(a) % 2
+    moduleLenB = len(b) % 2
 
-    if len(a) % 2 == 0:
+    #print moduleLenA
+    #print moduleLenB
+
+    if moduleLenA == 0:
         afront = a[:len(a)/2]
         aback = a[(len(a)/2):]
-    if len(b) % 2 == 0:
+    if moduleLenB == 0:
          bfront = b[:len(b)/2]
          bback = b[(len(b)/2):]
+
+    if moduleLenA <> 0:
+        afront = a[:(len(a)/2)+1]
+        aback = a[(len(a)/2)+1:]
+    if moduleLenB % 2 <> 0:
+        bfront = b[:(len(b)/2)+1]
+        bback = b[(len(b)/2)+1:]
 
     return afront + bfront + aback + bback
 
