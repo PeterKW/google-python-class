@@ -61,10 +61,20 @@ def front_x(words):
 # Hint: use a custom key= function to extract the last element form each tuple.
 def sort_last(tuples):
     def sort_last_function(t):
-        return t[-1]
+      return t[-1]
+    s= sorted(tuples, key=sort_last_function)
+    return s
 
-    print sorted(t, key=sort_last_function)
+ ## Say we have a list of strings we want to sort by the last letter of the string.
+#  strs = ['xc', 'zb', 'yd' ,'wa']
 
+  ## Write a little function that takes a string, and returns its last letter.
+  ## This will be the key function (takes in 1 value, returns 1 value).
+#  def MyFn(s):
+#    return s[-1]
+
+  ## Now pass key=MyFn to sorted() to sort by the last letter:
+#  print sorted(strs, key=MyFn)  ## ['wa', 'zb', 'xc', 'yd']
 
 # Simple provided test() function used in main() to print
 # what each function returns vs. what it's supposed to return.
